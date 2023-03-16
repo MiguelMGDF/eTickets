@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eTickets.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
@@ -13,6 +14,17 @@ namespace eTickets.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public MovieCategory MovieCategory { get; set; }
+
+        //Relationships
+        public List<Actor_Movie> Actors_Movies { get; set; }
+
+        //Cinema
+        public int CinemaId { get; set; }
+        public Cinema Cinema { get; set; }
+
+        //Producer
+        public int ProducerId { get; set; }
+        public Producer Producer { get; set; }
 
     }
 }
